@@ -13,7 +13,7 @@
   border: 2px solid black;
   display: flex;
   justify-content: space-between;
-  background-image: url('../htmlcss/自己要编写的内容/main.jpg');
+  background-image: url('main.jpg');
   background-size: contain;
   /* 固定背景 */
   background-attachment: fixed;
