@@ -1,0 +1,17 @@
+/* 清除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: baseline;
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+  background: transparent;
+  text-align: left;
+}

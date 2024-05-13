@@ -1,0 +1,401 @@
+/*清楚基本样式*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  background-image: url('../htmlcss/自己要编写的内容/main.jpg');
+  background-size: contain;
+  /* 固定背景 */
+  background-attachment: fixed;
+}
+
+.matter {
+  display: flex;
+}
+
+.main .left {
+  width: 320px;
+  height: 760px;
+  border: 2px solid rgb(11, 113, 255);
+  border-radius: 50px;
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  /* 固定不动 */
+  /* position: fixed; */
+}
+
+.main .right {
+  width: 970px;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+
+
+
+  /* 调整右侧元素与左侧固定元素的水平间距，与上面的position fixed配合使用 */
+  /* margin-left: 420px; */
+
+
+  margin-top: 10px;
+}
+
+
+
+
+/* left01是头像，但是我现在好想不太不明。把他框起来，用11111结尾 */
+.left01 {
+  width: 230px;
+  height: 230px;
+  margin-top: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.left01 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 让img contain */
+  object-fit: cover;
+}
+
+.circle a:hover img {
+  animation: shake 0.5s;
+}
+
+/* 让头像达到颤抖一下的效果 */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+
+  75% {
+    transform: translateX(-3px) rotate(-3deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 111111111111111111111111111111111111111111111111111111111111111111111111111111111111 */
+
+.left02 {
+  width: 310px;
+  height: 400px;
+
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.right01 {
+  width: 960px;
+  height: 750px;
+  backdrop-filter: blur(3px);
+  border: #4b22ef solid 2px;
+  border-color: rgba(27, 171, 248, 0.1);
+
+  /* 背景模糊效果 */
+  background-color: rgba(69, 69, 69, 0.3);
+  /* 添加阴影效果 */
+  box-shadow: 0 0 10px rgba(6, 16, 223, 0.1);
+
+  /* 设置圆角 */
+  border-radius: 30px;
+  /*行高*/
+  line-height: 30px;
+  margin-bottom: 80px;
+  /* 过渡效果（可选） */
+  transition: background-color 0.3s ease;
+
+}
+
+.right02 {
+  width: 960px;
+  height: 750px;
+  /* 模糊效果 */
+  backdrop-filter: blur(3px);
+  border: #4b22ef solid 2px;
+
+  border-color: rgba(27, 171, 248, 0.1);
+  /* 背景模糊效果 */
+  background-color: rgba(69, 69, 69, 0.3);
+
+  /* 添加阴影效果 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  /* 设置圆角 */
+  border-radius: 30px;
+  /*行高*/
+  line-height: 30px;
+  /* 过渡效果（可选） */
+  margin-bottom: 80px;
+  transition: background-color 0.3s ease;
+}
+
+.r01_p img {
+  /* 让img变成块级元素后居中 */
+  display: block;
+  /* 上下20px左右auto居中 */
+  margin: 20px auto;
+  width: 800px;
+  height: 450px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  /* 半透明白色边框 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* 阴影效果 */
+
+}
+
+
+
+
+/* 这里写一个以后right都会用到的text属性吧 */
+.text {
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 10px;
+  color: rgb(10, 10, 10);
+  background-color: rgba(249, 214, 38, 0.5);
+  border-radius: 15px;
+
+}
+
+
+
+/*滚动条*/
+.scroll-container {
+  height: 750px;
+  overflow: auto;
+}
+
+
+/*按钮href*/
+.button-container {
+  display: flex;
+  flex-direction: column;
+  /* 让元素在垂直方向上排列 */
+  justify-content: center;
+  /* 将按钮垂直居中 */
+  align-items: center;
+  /* 将按钮水平居中 */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  /*使按钮元素以内联块级元素显示，使设置宽高和间距生效。*/
+  display: inline-block;
+  /*设置按钮内填充为10px顶部和底部，20px左右。mad，ai智障，这是设置宽高的*/
+  padding: 20px 60px;
+  font-weight: 600;
+  font-size: large;
+  color: #3289ec;
+  /*去除超链接默认样式*/
+  text-decoration: none;
+  /*设置按钮边框为1px宽度的#f1c40f（黄色）实线边框。*/
+  border: 1px solid #2b7ff5;
+  border-radius: 5px;
+  /*设置按钮状态变化动画为0.3秒。*/
+  transition: all 0.3s;
+  /* 添加间距 */
+  margin: 15px;
+  box-shadow: 2px 2px 2px rgb(26, 46, 156);
+
+}
+
+.button:hover {
+  /*选择器，用于选择按钮元素在悬停状态下的样式。*/
+  background-color: rgb(230, 126, 34, 0.5);
+  /*设置按钮悬停时的背景颜色为#e67e22（橙色）。*/
+  border: 1px solid rgb(230, 126, 34);
+
+}
+
+
+/* 双伪元素清除浮动 */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+  /* 兼容IE低版本浏览器 */
+}
+
+/* 双伪元素清除浮动 */
+
+
+/* 222222222222222222222222222222222222222222222222222222222222222222222222222222 */
+/* 头部 */
+
+
+
+
+/* 首页 */
+
+/* 版心样式 */
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+/* 首页背景色浅灰色 */
+
+
+/* 头部区域样式  */
+.header {
+  order: -1;
+  height: 100px;
+  backdrop-filter: blur(5px);
+}
+
+.header .wrapper {
+  display: flex;
+  padding-top: 29px;
+}
+
+/* logo设计 */
+.logo a {
+  display: block;
+  width: 195px;
+  height: 41px;
+  background-image: url('/htmlcss/自己要编写的内容/ce.jpg');
+  font-size: 0;
+  background-size: contain; 
+  
+}
+
+
+/* 导航结构 */
+.nav {
+  margin-left: 102px;
+  font-size: 19px;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 24px;
+}
+
+.nav li a {
+  display: block;
+  padding: 6px 8px;
+  line-height: 27px;
+}
+
+/* 
+导航--并集选择器选择了active和hover， active是默认选中的a，例如首页这里是默认的，下面会有蓝色线*/
+.nav li .active,
+.nav li a:hover {
+  border-bottom: 2px solid rgb(52, 160, 227);
+}
+
+
+/* 搜索 */
+.search {
+  display: flex;
+  padding-left: 19px;
+  padding-right: 12px;
+  width: 312px;
+  height: 40px;
+  background-color: #f3f5f7;
+  border-radius: 20px;
+  margin-left: 64px;
+}
+
+.search input {
+  flex: 1;
+  border: 0;
+  /* 背景透明 */
+  background-color: transparent;
+  /* 选中文本框后的边框的样式取消 */
+  outline: none;
+}
+
+/* 选中placeholder 属性文字样式 */
+.search input::placeholder {
+  color: #999;
+  font-size: 14px;
+
+}
+
+
+/* 此时父级已经是flex了，a是子集为弹性盒子了 */
+.search a {
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  background-image: url('#');
+  background-color: chartreuse;
+}
+
+/* 用户区域 */
+
+.user {
+  margin-left: 60px;
+  margin-top: 4px;
+}
+
+.user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* vertical-align: middle;行内块和行内垂直方向对齐方式 */
+  vertical-align: middle;
+
+}
+
+.user span {
+  margin-left: 10px;
+}
