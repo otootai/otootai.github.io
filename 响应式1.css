@@ -1,0 +1,173 @@
+@media only screen and (max-width: 600px) {
+  /* 在这里添加针对小屏幕设备的样式 */
+
+  /* 清除基本样式 */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 2200px;
+    border: 2px solid black;
+    justify-content: space-between;
+    background-image: url('../vue，js，css，html/js所在位置/lanbei.jpg');
+    background-size: cover;
+    /* 保持比例填充容器 */
+    background-position: center;
+    /* 图片居中显示 */
+    background-attachment: fixed;
+    /* 背景固定不动 */
+  }
+
+  .main .left {
+    border-color: rgba(27, 171, 248, 0.1);
+
+    /* 背景模糊效果 */
+    background-color: rgba(69, 69, 69, 0.3);
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+  }
+
+  .main .right {
+
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left01 {
+    width: 80px;
+    height: 80px;
+
+    align-self: center;
+  }
+
+
+  .left02 {
+    width: 480px;
+    height: 30px;
+    align-self: center;
+  }
+
+
+  /* 头像 */
+  .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .left01 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* 让img contain */
+    object-fit: cover;
+  }
+
+  .circle a:hover img {
+    animation: shake 0.5s;
+  }
+
+  /* 让头像达到颤抖一下的效果 */
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(-5px) rotate(-5deg);
+    }
+
+    50% {
+      transform: translateX(5px) rotate(5deg);
+    }
+
+    75% {
+      transform: translateX(-3px) rotate(-3deg);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /*按钮href*/
+  .button-container {
+    display: flex;
+    /* 将按钮垂直居中 */
+    align-items: center;
+    /* 将按钮水平居中 */
+
+  }
+
+  .button {
+    /*使按钮元素以内联块级元素显示，使设置宽高和间距生效。*/
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: large;
+    color: #3289ec;
+    font-weight: 600;
+
+    /*设置按钮边框为1px宽度的#f1c40f（黄色）实线边框。*/
+    border: 1px solid #2b7ff5;
+    border-radius: 5px;
+
+    /*设置按钮状态变化动画为0.3秒。*/
+    transition: all 0.3s;
+    /* 添加间距 */
+
+    box-shadow: 2px 2px 2px rgb(26, 46, 156);
+
+  }
+
+  .button:hover {
+    /*选择器，用于选择按钮元素在悬停状态下的样式。*/
+    background-color: rgb(230, 126, 34, 0.5);
+    /*设置按钮悬停时的背景颜色为#e67e22（橙色）。*/
+    border: 1px solid rgb(230, 126, 34);
+
+  }
+
+
+
+  /* right的效果,也就是下面的效果 */
+  .right01 {
+    width: 500px;
+    height: 281px;
+    backdrop-filter: blur(3px);
+    border: #4b22ef solid 2px;
+    border-color: rgba(27, 171, 248, 0.1);
+
+    /* 背景模糊效果 */
+    background-color: rgba(69, 69, 69, 0.3);
+    /* 添加阴影效果 */
+    box-shadow: 0 0 10px rgba(6, 16, 223, 0.1);
+
+    /* 设置圆角 */
+    border-radius: 30px;
+    /*行高*/
+    line-height: 30px;
+    margin-bottom: 80px;
+    /* 过渡效果（可选） */
+    transition: background-color 0.3s ease;
+
+  }
+
+}
