@@ -16,7 +16,7 @@
     height: 2200px;
     border: 2px solid black;
     justify-content: space-between;
-    background-image: url('./lanbei.jpg');
+    background-image: url('/lanbei.jpg');
     background-size: cover;
     /* 保持比例填充容器 */
     background-position: center;
