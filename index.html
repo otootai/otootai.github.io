@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 弹出选择框
+    var device = prompt("请选择您使用的设备（可能会影响您的体验）：\n1. PC端\n2. 手机端");
+
+    // 判断用户选择的设备并进行跳转
+    if (device === "1") {
+        // PC端跳转
+        window.location.href = "主页.html";
+    } else if (device === "2") {
+        // 手机端跳转
+        window.location.href = "手机端.html";
+    } else {
+        // 用户取消或输入无效选项时给出提示
+        alert("无效的选项，请重新选择！");
+    }
+</script>
+</body>
+</html>
